@@ -4,6 +4,8 @@ HTML Documentation located inside docs/
 
 There is a copy of the docs that is in Markdown for use on Github. I recommend getting the documentation and rendering it locally in your web browser, it looks significantly nicer.
 
+Keep in mind, all documentation is cronological. I did not go back and make edits so you could see my train of thought. This would not be done for a real project, where documentation needs to be lean and clean.
+
 ## Running
 
 Download a copy of this repository and `cd` to make it your working directory.
@@ -33,3 +35,4 @@ Some other notes:
 * Add more failsafes.
 * The database instance should definitely have a name in future.
 * Don't upload venv, use requirements.txt. Yes, I know, but honestly too much time has been spent on this already ;)
+* Update docs if this was real.
