@@ -38,3 +38,4 @@ Some other notes:
 * The database instance should definitely have a name in future.
 * Don't upload venv, use requirements.txt. Yes, I know, but honestly too much time has been spent on this already ;)
 * Update docs if this was real.
+* **Enable termination protection. Just had to re-iterate that. It's important.**
