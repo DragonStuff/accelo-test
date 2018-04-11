@@ -1,0 +1,4 @@
+salt-ssh:
+  roster_file: roster-accelo.yaml
+  config_dir: .
+  log_file: log.txt

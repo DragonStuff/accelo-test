@@ -1,0 +1,1137 @@
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Accelo Reference</title>
+
+    <style>
+      .highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight .gh {
+  color: #999999;
+}
+.highlight .sr {
+  color: #f6aa11;
+}
+.highlight .go {
+  color: #888888;
+}
+.highlight .gp {
+  color: #555555;
+}
+.highlight .gs {
+}
+.highlight .gu {
+  color: #aaaaaa;
+}
+.highlight .nb {
+  color: #f6aa11;
+}
+.highlight .cm {
+  color: #75715e;
+}
+.highlight .cp {
+  color: #75715e;
+}
+.highlight .c1 {
+  color: #75715e;
+}
+.highlight .cs {
+  color: #75715e;
+}
+.highlight .c, .highlight .cd {
+  color: #75715e;
+}
+.highlight .err {
+  color: #960050;
+}
+.highlight .gr {
+  color: #960050;
+}
+.highlight .gt {
+  color: #960050;
+}
+.highlight .gd {
+  color: #49483e;
+}
+.highlight .gi {
+  color: #49483e;
+}
+.highlight .ge {
+  color: #49483e;
+}
+.highlight .kc {
+  color: #66d9ef;
+}
+.highlight .kd {
+  color: #66d9ef;
+}
+.highlight .kr {
+  color: #66d9ef;
+}
+.highlight .no {
+  color: #66d9ef;
+}
+.highlight .kt {
+  color: #66d9ef;
+}
+.highlight .mf {
+  color: #ae81ff;
+}
+.highlight .mh {
+  color: #ae81ff;
+}
+.highlight .il {
+  color: #ae81ff;
+}
+.highlight .mi {
+  color: #ae81ff;
+}
+.highlight .mo {
+  color: #ae81ff;
+}
+.highlight .m, .highlight .mb, .highlight .mx {
+  color: #ae81ff;
+}
+.highlight .sc {
+  color: #ae81ff;
+}
+.highlight .se {
+  color: #ae81ff;
+}
+.highlight .ss {
+  color: #ae81ff;
+}
+.highlight .sd {
+  color: #e6db74;
+}
+.highlight .s2 {
+  color: #e6db74;
+}
+.highlight .sb {
+  color: #e6db74;
+}
+.highlight .sh {
+  color: #e6db74;
+}
+.highlight .si {
+  color: #e6db74;
+}
+.highlight .sx {
+  color: #e6db74;
+}
+.highlight .s1 {
+  color: #e6db74;
+}
+.highlight .s {
+  color: #e6db74;
+}
+.highlight .na {
+  color: #a6e22e;
+}
+.highlight .nc {
+  color: #a6e22e;
+}
+.highlight .nd {
+  color: #a6e22e;
+}
+.highlight .ne {
+  color: #a6e22e;
+}
+.highlight .nf {
+  color: #a6e22e;
+}
+.highlight .vc {
+  color: #ffffff;
+}
+.highlight .nn {
+  color: #ffffff;
+}
+.highlight .nl {
+  color: #ffffff;
+}
+.highlight .ni {
+  color: #ffffff;
+}
+.highlight .bp {
+  color: #ffffff;
+}
+.highlight .vg {
+  color: #ffffff;
+}
+.highlight .vi {
+  color: #ffffff;
+}
+.highlight .nv {
+  color: #ffffff;
+}
+.highlight .w {
+  color: #ffffff;
+}
+.highlight {
+  color: #ffffff;
+}
+.highlight .n, .highlight .py, .highlight .nx {
+  color: #ffffff;
+}
+.highlight .ow {
+  color: #f92672;
+}
+.highlight .nt {
+  color: #f92672;
+}
+.highlight .k, .highlight .kv {
+  color: #f92672;
+}
+.highlight .kn {
+  color: #f92672;
+}
+.highlight .kp {
+  color: #f92672;
+}
+.highlight .o {
+  color: #f92672;
+}
+    </style>
+    <link href="stylesheets/screen.css" rel="stylesheet" media="screen" />
+    <link href="stylesheets/print.css" rel="stylesheet" media="print" />
+      <script src="javascripts/all.js"></script>
+  </head>
+
+  <body class="index" data-languages="[&quot;shell&quot;]">
+    <a href="#" id="nav-button">
+      <span>
+        NAV
+        <img src="images/navbar.png" alt="Navbar" />
+      </span>
+    </a>
+    <div class="toc-wrapper">
+      <img src="images/logo.png" class="logo" alt="Logo" />
+        <div class="lang-selector">
+              <a href="#" data-language-name="shell">shell</a>
+        </div>
+        <div class="search">
+          <input type="text" class="search" id="input-search" placeholder="Search">
+        </div>
+        <ul class="search-results"></ul>
+      <div id="toc" class="toc-list-h1">
+          <li>
+            <a href="#introduction" class="toc-h1 toc-link" data-title="introduction">Introduction.</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#breaking-down-the-project" class="toc-h2 toc-link" data-title="breaking-down-the-project">Breaking down the project.</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#ec2-resources" class="toc-h1 toc-link" data-title="ec2-resources">EC2 Resources.</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#ec2-app-instance" class="toc-h2 toc-link" data-title="ec2-app-instance">EC2 App Instance.</a>
+                  </li>
+                  <li>
+                    <a href="#ec2-web-instance" class="toc-h2 toc-link" data-title="ec2-web-instance">EC2 Web Instance.</a>
+                  </li>
+                  <li>
+                    <a href="#ec2-routetable" class="toc-h2 toc-link" data-title="ec2-routetable">EC2 RouteTable.</a>
+                  </li>
+                  <li>
+                    <a href="#deploying" class="toc-h2 toc-link" data-title="deploying">Deploying.</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#things-to-keep-in-mind" class="toc-h1 toc-link" data-title="things-to-keep-in-mind">Things to keep in mind.</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#cloudformation-itself" class="toc-h2 toc-link" data-title="cloudformation-itself">CloudFormation itself.</a>
+                  </li>
+                  <li>
+                    <a href="#the-cloudformation-template" class="toc-h2 toc-link" data-title="the-cloudformation-template">The CloudFormation template.</a>
+                  </li>
+                  <li>
+                    <a href="#automation" class="toc-h2 toc-link" data-title="automation">Automation.</a>
+                  </li>
+                  <li>
+                    <a href="#cloudwatch" class="toc-h2 toc-link" data-title="cloudwatch">CloudWatch</a>
+                  </li>
+                  <li>
+                    <a href="#awscli" class="toc-h2 toc-link" data-title="awscli">AWSCli</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#now-to-business" class="toc-h1 toc-link" data-title="now-to-business">Now to business.</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#specifying-what-we-need-and-where-we-need-it" class="toc-h2 toc-link" data-title="specifying-what-we-need-and-where-we-need-it">Specifying what we need, and where we need it.</a>
+                  </li>
+                  <li>
+                    <a href="#altering-the-cloudformation-template-to-add-our-userdata" class="toc-h2 toc-link" data-title="altering-the-cloudformation-template-to-add-our-userdata">Altering the CloudFormation Template to add our userdata.</a>
+                  </li>
+                  <li>
+                    <a href="#ssl" class="toc-h2 toc-link" data-title="ssl">SSL</a>
+                  </li>
+                  <li>
+                    <a href="#web-instance-userdata" class="toc-h2 toc-link" data-title="web-instance-userdata">Web instance - UserData.</a>
+                  </li>
+                  <li>
+                    <a href="#app-instance-userdata" class="toc-h2 toc-link" data-title="app-instance-userdata">App instance - UserData.</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#client-setup-and-deployment-of-the-stack" class="toc-h1 toc-link" data-title="client-setup-and-deployment-of-the-stack">Client Setup and Deployment of the Stack.</a>
+          </li>
+      </div>
+        <ul class="toc-footer">
+            <li><p>Documentation by Alexander.</p></li>
+        </ul>
+    </div>
+    <div class="page-wrapper">
+      <div class="dark-box"></div>
+      <div class="content">
+        <h1 id='introduction'>Introduction.</h1>
+<p>This documentation outlines the steps I took to deploy, and automate the deployment of, the Accelo test project.</p>
+
+<p>The beginning of this documentation outlines the steps I took to understand the project and the environment.</p>
+
+<p>The aim of this documentation is both to outline how to deploy the application, as well test the application against the specification.</p>
+<h2 id='breaking-down-the-project'>Breaking down the project.</h2>
+<blockquote>
+<p><img src="images/cf.png" title="CloudFront Image" alt="CloudFront Image" /></p>
+</blockquote>
+
+<p>My first step was to upload the template to CloudFormation in order to visualise it. This gave me a better understanding of the requirements.
+My next step was to break down each part of the stack in order to see where we can automate and enhance the security of the stack. This is below.</p>
+<h1 id='ec2-resources'>EC2 Resources.</h1>
+<p>I needed to break down what resources were being deployed so that I could see how the stack looked. CloudFormation Designer was a good tool to use here.</p>
+
+<p>I also wanted the template in a YAML format, see right.</p>
+
+<blockquote>
+<p>Template</p>
+</blockquote>
+<pre class="highlight yaml tab-yaml"><code><span class="na">AWSTemplateFormatVersion</span><span class="pi">:</span> <span class="s">2010-09-09</span>
+<span class="na">Description</span><span class="pi">:</span> <span class="s">Create test project environment</span>
+<span class="na">Parameters</span><span class="pi">:</span>
+  <span class="na">KeyName</span><span class="pi">:</span>
+    <span class="na">Description</span><span class="pi">:</span> <span class="s">SSH key pair to use</span>
+    <span class="na">Type</span><span class="pi">:</span> <span class="s">String</span>
+<span class="na">Mappings</span><span class="pi">:</span>
+  <span class="na">Config</span><span class="pi">:</span>
+    <span class="na">Static</span><span class="pi">:</span>
+      <span class="na">AMI</span><span class="pi">:</span> <span class="s">ami-a042f4d8</span>
+      <span class="na">Cidr</span><span class="pi">:</span> <span class="s">10.0.0.0/16</span>
+      <span class="na">DbInstanceType</span><span class="pi">:</span> <span class="s">db.t2.micro</span>
+      <span class="na">DbPassword</span><span class="pi">:</span> <span class="s">Simple+test^Project!</span>
+      <span class="na">DbUsername</span><span class="pi">:</span> <span class="s">test_project</span>
+      <span class="na">InstanceType</span><span class="pi">:</span> <span class="s">t2.micro</span>
+      <span class="na">HostBits</span><span class="pi">:</span> <span class="s1">'</span><span class="s">8'</span>
+      <span class="na">SubnetCount</span><span class="pi">:</span> <span class="s1">'</span><span class="s">2'</span>
+<span class="na">Resources</span><span class="pi">:</span>
+  <span class="na">Vpc</span><span class="pi">:</span>
+    <span class="na">Type</span><span class="pi">:</span> <span class="s1">'</span><span class="s">AWS::EC2::VPC'</span>
+    <span class="na">Properties</span><span class="pi">:</span>
+      <span class="na">CidrBlock</span><span class="pi">:</span> <span class="kt">!FindInMap</span> 
+        <span class="pi">-</span> <span class="s">Config</span>
+        <span class="pi">-</span> <span class="s">Static</span>
+        <span class="pi">-</span> <span class="s">Cidr</span>
+      <span class="na">InstanceTenancy</span><span class="pi">:</span> <span class="s">default</span>
+      <span class="na">EnableDnsSupport</span><span class="pi">:</span> <span class="s1">'</span><span class="s">true'</span>
+      <span class="na">EnableDnsHostnames</span><span class="pi">:</span> <span class="s1">'</span><span class="s">true'</span>
+      <span class="na">Tags</span><span class="pi">:</span>
+        <span class="pi">-</span> <span class="na">Key</span><span class="pi">:</span> <span class="s">Name</span>
+          <span class="na">Value</span><span class="pi">:</span> <span class="s">Test project</span>
+  <span class="na">Subneta</span><span class="pi">:</span>
+    <span class="na">Type</span><span class="pi">:</span> <span class="s1">'</span><span class="s">AWS::EC2::Subnet'</span>
+    <span class="na">Properties</span><span class="pi">:</span>
+      <span class="na">AvailabilityZone</span><span class="pi">:</span> <span class="kt">!Join</span> 
+        <span class="pi">-</span> <span class="s1">'</span><span class="s">'</span>
+        <span class="pi">-</span> <span class="pi">-</span> <span class="kt">!Ref</span> <span class="s1">'</span><span class="s">AWS::Region'</span>
+          <span class="pi">-</span> <span class="s">a</span>
+      <span class="na">VpcId</span><span class="pi">:</span> <span class="kt">!Ref</span> <span class="s">Vpc</span>
+      <span class="na">CidrBlock</span><span class="pi">:</span> <span class="kt">!Select</span> 
+        <span class="pi">-</span> <span class="s1">'</span><span class="s">0'</span>
+        <span class="pi">-</span> <span class="s1">'</span><span class="s">Fn::Cidr'</span><span class="pi">:</span>
+            <span class="pi">-</span> <span class="kt">!FindInMap</span> 
+              <span class="pi">-</span> <span class="s">Config</span>
+              <span class="pi">-</span> <span class="s">Static</span>
+              <span class="pi">-</span> <span class="s">Cidr</span>
+            <span class="pi">-</span> <span class="kt">!FindInMap</span> 
+              <span class="pi">-</span> <span class="s">Config</span>
+              <span class="pi">-</span> <span class="s">Static</span>
+              <span class="pi">-</span> <span class="s">SubnetCount</span>
+            <span class="pi">-</span> <span class="kt">!FindInMap</span> 
+              <span class="pi">-</span> <span class="s">Config</span>
+              <span class="pi">-</span> <span class="s">Static</span>
+              <span class="pi">-</span> <span class="s">HostBits</span>
+      <span class="na">MapPublicIpOnLaunch</span><span class="pi">:</span> <span class="s1">'</span><span class="s">true'</span>
+      <span class="na">Tags</span><span class="pi">:</span>
+        <span class="pi">-</span> <span class="na">Key</span><span class="pi">:</span> <span class="s">Name</span>
+          <span class="na">Value</span><span class="pi">:</span> <span class="s">Test Project Zone A</span>
+  <span class="na">Subnetb</span><span class="pi">:</span>
+    <span class="na">Type</span><span class="pi">:</span> <span class="s1">'</span><span class="s">AWS::EC2::Subnet'</span>
+    <span class="na">Properties</span><span class="pi">:</span>
+      <span class="na">AvailabilityZone</span><span class="pi">:</span> <span class="kt">!Join</span> 
+        <span class="pi">-</span> <span class="s1">'</span><span class="s">'</span>
+        <span class="pi">-</span> <span class="pi">-</span> <span class="kt">!Ref</span> <span class="s1">'</span><span class="s">AWS::Region'</span>
+          <span class="pi">-</span> <span class="s">b</span>
+      <span class="na">VpcId</span><span class="pi">:</span> <span class="kt">!Ref</span> <span class="s">Vpc</span>
+      <span class="na">CidrBlock</span><span class="pi">:</span> <span class="kt">!Select</span> 
+        <span class="pi">-</span> <span class="s1">'</span><span class="s">1'</span>
+        <span class="pi">-</span> <span class="s1">'</span><span class="s">Fn::Cidr'</span><span class="pi">:</span>
+            <span class="pi">-</span> <span class="kt">!FindInMap</span> 
+              <span class="pi">-</span> <span class="s">Config</span>
+              <span class="pi">-</span> <span class="s">Static</span>
+              <span class="pi">-</span> <span class="s">Cidr</span>
+            <span class="pi">-</span> <span class="kt">!FindInMap</span> 
+              <span class="pi">-</span> <span class="s">Config</span>
+              <span class="pi">-</span> <span class="s">Static</span>
+              <span class="pi">-</span> <span class="s">SubnetCount</span>
+            <span class="pi">-</span> <span class="kt">!FindInMap</span> 
+              <span class="pi">-</span> <span class="s">Config</span>
+              <span class="pi">-</span> <span class="s">Static</span>
+              <span class="pi">-</span> <span class="s">HostBits</span>
+      <span class="na">MapPublicIpOnLaunch</span><span class="pi">:</span> <span class="s1">'</span><span class="s">true'</span>
+      <span class="na">Tags</span><span class="pi">:</span>
+        <span class="pi">-</span> <span class="na">Key</span><span class="pi">:</span> <span class="s">Name</span>
+          <span class="na">Value</span><span class="pi">:</span> <span class="s">Test Project Zone B</span>
+  <span class="na">RdsSubnet</span><span class="pi">:</span>
+    <span class="na">Type</span><span class="pi">:</span> <span class="s1">'</span><span class="s">AWS::RDS::DBSubnetGroup'</span>
+    <span class="na">Properties</span><span class="pi">:</span>
+      <span class="na">DBSubnetGroupDescription</span><span class="pi">:</span> <span class="s">Test Project RDS subnt group</span>
+      <span class="na">SubnetIds</span><span class="pi">:</span>
+        <span class="pi">-</span> <span class="kt">!Ref</span> <span class="s">Subneta</span>
+        <span class="pi">-</span> <span class="kt">!Ref</span> <span class="s">Subnetb</span>
+  <span class="na">InternetGateway</span><span class="pi">:</span>
+    <span class="na">Type</span><span class="pi">:</span> <span class="s1">'</span><span class="s">AWS::EC2::InternetGateway'</span>
+    <span class="na">Properties</span><span class="pi">:</span>
+      <span class="na">Tags</span><span class="pi">:</span>
+        <span class="pi">-</span> <span class="na">Key</span><span class="pi">:</span> <span class="s">Name</span>
+          <span class="na">Value</span><span class="pi">:</span> <span class="s">Test Project</span>
+  <span class="na">VpcGatewayAttachment</span><span class="pi">:</span>
+    <span class="na">Type</span><span class="pi">:</span> <span class="s1">'</span><span class="s">AWS::EC2::VPCGatewayAttachment'</span>
+    <span class="na">Properties</span><span class="pi">:</span>
+      <span class="na">VpcId</span><span class="pi">:</span> <span class="kt">!Ref</span> <span class="s">Vpc</span>
+      <span class="na">InternetGatewayId</span><span class="pi">:</span> <span class="kt">!Ref</span> <span class="s">InternetGateway</span>
+  <span class="na">RouteTable</span><span class="pi">:</span>
+    <span class="na">Type</span><span class="pi">:</span> <span class="s1">'</span><span class="s">AWS::EC2::RouteTable'</span>
+    <span class="na">Properties</span><span class="pi">:</span>
+      <span class="na">VpcId</span><span class="pi">:</span> <span class="kt">!Ref</span> <span class="s">Vpc</span>
+      <span class="na">Tags</span><span class="pi">:</span>
+        <span class="pi">-</span> <span class="na">Key</span><span class="pi">:</span> <span class="s">Name</span>
+          <span class="na">Value</span><span class="pi">:</span> <span class="s">Test Project</span>
+  <span class="na">PublicRoute</span><span class="pi">:</span>
+    <span class="na">Type</span><span class="pi">:</span> <span class="s1">'</span><span class="s">AWS::EC2::Route'</span>
+    <span class="na">Properties</span><span class="pi">:</span>
+      <span class="na">RouteTableId</span><span class="pi">:</span> <span class="kt">!Ref</span> <span class="s">RouteTable</span>
+      <span class="na">DestinationCidrBlock</span><span class="pi">:</span> <span class="s">0.0.0.0/0</span>
+      <span class="na">GatewayId</span><span class="pi">:</span> <span class="kt">!Ref</span> <span class="s">InternetGateway</span>
+  <span class="na">SubaRouteTableAssociation</span><span class="pi">:</span>
+    <span class="na">Type</span><span class="pi">:</span> <span class="s1">'</span><span class="s">AWS::EC2::SubnetRouteTableAssociation'</span>
+    <span class="na">Properties</span><span class="pi">:</span>
+      <span class="na">SubnetId</span><span class="pi">:</span> <span class="kt">!Ref</span> <span class="s">Subneta</span>
+      <span class="na">RouteTableId</span><span class="pi">:</span> <span class="kt">!Ref</span> <span class="s">RouteTable</span>
+  <span class="na">PublicNetworkAcl</span><span class="pi">:</span>
+    <span class="na">Type</span><span class="pi">:</span> <span class="s1">'</span><span class="s">AWS::EC2::NetworkAcl'</span>
+    <span class="na">Properties</span><span class="pi">:</span>
+      <span class="na">VpcId</span><span class="pi">:</span> <span class="kt">!Ref</span> <span class="s">Vpc</span>
+      <span class="na">Tags</span><span class="pi">:</span>
+        <span class="pi">-</span> <span class="na">Key</span><span class="pi">:</span> <span class="s">Name</span>
+          <span class="na">Value</span><span class="pi">:</span> <span class="s">Test Project</span>
+  <span class="na">InboundNetworkAclEntry</span><span class="pi">:</span>
+    <span class="na">Type</span><span class="pi">:</span> <span class="s1">'</span><span class="s">AWS::EC2::NetworkAclEntry'</span>
+    <span class="na">Properties</span><span class="pi">:</span>
+      <span class="na">NetworkAclId</span><span class="pi">:</span> <span class="kt">!Ref</span> <span class="s">PublicNetworkAcl</span>
+      <span class="na">RuleNumber</span><span class="pi">:</span> <span class="s1">'</span><span class="s">100'</span>
+      <span class="na">Protocol</span><span class="pi">:</span> <span class="s1">'</span><span class="s">-1'</span>
+      <span class="na">RuleAction</span><span class="pi">:</span> <span class="s">allow</span>
+      <span class="na">Egress</span><span class="pi">:</span> <span class="s1">'</span><span class="s">false'</span>
+      <span class="na">CidrBlock</span><span class="pi">:</span> <span class="s">0.0.0.0/0</span>
+  <span class="na">OutboundNetworkAclEntry</span><span class="pi">:</span>
+    <span class="na">Type</span><span class="pi">:</span> <span class="s1">'</span><span class="s">AWS::EC2::NetworkAclEntry'</span>
+    <span class="na">Properties</span><span class="pi">:</span>
+      <span class="na">NetworkAclId</span><span class="pi">:</span> <span class="kt">!Ref</span> <span class="s">PublicNetworkAcl</span>
+      <span class="na">RuleNumber</span><span class="pi">:</span> <span class="s1">'</span><span class="s">100'</span>
+      <span class="na">Protocol</span><span class="pi">:</span> <span class="s1">'</span><span class="s">-1'</span>
+      <span class="na">RuleAction</span><span class="pi">:</span> <span class="s">allow</span>
+      <span class="na">Egress</span><span class="pi">:</span> <span class="s1">'</span><span class="s">true'</span>
+      <span class="na">CidrBlock</span><span class="pi">:</span> <span class="s">0.0.0.0/0</span>
+  <span class="na">SubnetaNetworkAclAssociation</span><span class="pi">:</span>
+    <span class="na">Type</span><span class="pi">:</span> <span class="s1">'</span><span class="s">AWS::EC2::SubnetNetworkAclAssociation'</span>
+    <span class="na">Properties</span><span class="pi">:</span>
+      <span class="na">SubnetId</span><span class="pi">:</span> <span class="kt">!Ref</span> <span class="s">Subneta</span>
+      <span class="na">NetworkAclId</span><span class="pi">:</span> <span class="kt">!Ref</span> <span class="s">PublicNetworkAcl</span>
+  <span class="na">SecGrp</span><span class="pi">:</span>
+    <span class="na">Type</span><span class="pi">:</span> <span class="s1">'</span><span class="s">AWS::EC2::SecurityGroup'</span>
+    <span class="na">Properties</span><span class="pi">:</span>
+      <span class="na">GroupDescription</span><span class="pi">:</span> <span class="s">Security group for test project hosts</span>
+      <span class="na">SecurityGroupIngress</span><span class="pi">:</span>
+        <span class="pi">-</span> <span class="na">IpProtocol</span><span class="pi">:</span> <span class="s">tcp</span>
+          <span class="na">FromPort</span><span class="pi">:</span> <span class="s1">'</span><span class="s">443'</span>
+          <span class="na">ToPort</span><span class="pi">:</span> <span class="s1">'</span><span class="s">443'</span>
+          <span class="na">CidrIp</span><span class="pi">:</span> <span class="s">0.0.0.0/0</span>
+        <span class="pi">-</span> <span class="na">IpProtocol</span><span class="pi">:</span> <span class="s">tcp</span>
+          <span class="na">FromPort</span><span class="pi">:</span> <span class="s1">'</span><span class="s">80'</span>
+          <span class="na">ToPort</span><span class="pi">:</span> <span class="s1">'</span><span class="s">80'</span>
+          <span class="na">CidrIp</span><span class="pi">:</span> <span class="s">0.0.0.0/0</span>
+        <span class="pi">-</span> <span class="na">IpProtocol</span><span class="pi">:</span> <span class="s">tcp</span>
+          <span class="na">FromPort</span><span class="pi">:</span> <span class="s1">'</span><span class="s">22'</span>
+          <span class="na">ToPort</span><span class="pi">:</span> <span class="s1">'</span><span class="s">22'</span>
+          <span class="na">CidrIp</span><span class="pi">:</span> <span class="s">0.0.0.0/0</span>
+      <span class="na">Tags</span><span class="pi">:</span>
+        <span class="pi">-</span> <span class="na">Key</span><span class="pi">:</span> <span class="s">Name</span>
+          <span class="na">Value</span><span class="pi">:</span> <span class="s">SecGrp</span>
+      <span class="na">VpcId</span><span class="pi">:</span> <span class="kt">!Ref</span> <span class="s">Vpc</span>
+  <span class="na">Ec2Role</span><span class="pi">:</span>
+    <span class="na">Type</span><span class="pi">:</span> <span class="s1">'</span><span class="s">AWS::IAM::Role'</span>
+    <span class="na">Properties</span><span class="pi">:</span>
+      <span class="na">AssumeRolePolicyDocument</span><span class="pi">:</span>
+        <span class="na">Version</span><span class="pi">:</span> <span class="s">2012-10-17</span>
+        <span class="na">Statement</span><span class="pi">:</span>
+          <span class="pi">-</span> <span class="na">Effect</span><span class="pi">:</span> <span class="s">Allow</span>
+            <span class="na">Principal</span><span class="pi">:</span>
+              <span class="na">Service</span><span class="pi">:</span>
+                <span class="pi">-</span> <span class="s">ec2.amazonaws.com</span>
+            <span class="na">Action</span><span class="pi">:</span>
+              <span class="pi">-</span> <span class="s1">'</span><span class="s">sts:AssumeRole'</span>
+      <span class="na">Path</span><span class="pi">:</span> <span class="s">/</span>
+      <span class="na">RoleName</span><span class="pi">:</span> <span class="s">test_project</span>
+  <span class="na">Ec2InstanceProfile</span><span class="pi">:</span>
+    <span class="na">Type</span><span class="pi">:</span> <span class="s1">'</span><span class="s">AWS::IAM::InstanceProfile'</span>
+    <span class="na">Properties</span><span class="pi">:</span>
+      <span class="na">InstanceProfileName</span><span class="pi">:</span> <span class="s">test_prject_servers</span>
+      <span class="na">Path</span><span class="pi">:</span> <span class="s">/</span>
+      <span class="na">Roles</span><span class="pi">:</span>
+        <span class="pi">-</span> <span class="kt">!Ref</span> <span class="s">Ec2Role</span>
+  <span class="na">RdsInstance</span><span class="pi">:</span>
+    <span class="na">Type</span><span class="pi">:</span> <span class="s1">'</span><span class="s">AWS::RDS::DBInstance'</span>
+    <span class="na">Properties</span><span class="pi">:</span>
+      <span class="na">DBName</span><span class="pi">:</span> <span class="s">testproject</span>
+      <span class="na">VPCSecurityGroups</span><span class="pi">:</span>
+        <span class="pi">-</span> <span class="kt">!Ref</span> <span class="s">SecGrp</span>
+      <span class="na">DBSubnetGroupName</span><span class="pi">:</span> <span class="kt">!Ref</span> <span class="s">RdsSubnet</span>
+      <span class="na">AllocatedStorage</span><span class="pi">:</span> <span class="s1">'</span><span class="s">5'</span>
+      <span class="na">DBInstanceClass</span><span class="pi">:</span> <span class="kt">!FindInMap</span> 
+        <span class="pi">-</span> <span class="s">Config</span>
+        <span class="pi">-</span> <span class="s">Static</span>
+        <span class="pi">-</span> <span class="s">DbInstanceType</span>
+      <span class="na">Engine</span><span class="pi">:</span> <span class="s">MySQL</span>
+      <span class="na">MasterUsername</span><span class="pi">:</span> <span class="kt">!FindInMap</span> 
+        <span class="pi">-</span> <span class="s">Config</span>
+        <span class="pi">-</span> <span class="s">Static</span>
+        <span class="pi">-</span> <span class="s">DbUsername</span>
+      <span class="na">MasterUserPassword</span><span class="pi">:</span> <span class="kt">!FindInMap</span> 
+        <span class="pi">-</span> <span class="s">Config</span>
+        <span class="pi">-</span> <span class="s">Static</span>
+        <span class="pi">-</span> <span class="s">DbPassword</span>
+  <span class="na">WebEc2</span><span class="pi">:</span>
+    <span class="na">Type</span><span class="pi">:</span> <span class="s1">'</span><span class="s">AWS::EC2::Instance'</span>
+    <span class="na">Properties</span><span class="pi">:</span>
+      <span class="na">ImageId</span><span class="pi">:</span> <span class="kt">!FindInMap</span> 
+        <span class="pi">-</span> <span class="s">Config</span>
+        <span class="pi">-</span> <span class="s">Static</span>
+        <span class="pi">-</span> <span class="s">AMI</span>
+      <span class="na">InstanceType</span><span class="pi">:</span> <span class="kt">!FindInMap</span> 
+        <span class="pi">-</span> <span class="s">Config</span>
+        <span class="pi">-</span> <span class="s">Static</span>
+        <span class="pi">-</span> <span class="s">InstanceType</span>
+      <span class="na">IamInstanceProfile</span><span class="pi">:</span> <span class="kt">!Ref</span> <span class="s">Ec2InstanceProfile</span>
+      <span class="na">Tags</span><span class="pi">:</span>
+        <span class="pi">-</span> <span class="na">Key</span><span class="pi">:</span> <span class="s">Name</span>
+          <span class="na">Value</span><span class="pi">:</span> <span class="s">web</span>
+      <span class="na">KeyName</span><span class="pi">:</span> <span class="kt">!Ref</span> <span class="s">KeyName</span>
+      <span class="na">SecurityGroupIds</span><span class="pi">:</span>
+        <span class="pi">-</span> <span class="kt">!Ref</span> <span class="s">SecGrp</span>
+      <span class="na">SubnetId</span><span class="pi">:</span> <span class="kt">!Ref</span> <span class="s">Subneta</span>
+  <span class="na">AppEc2</span><span class="pi">:</span>
+    <span class="na">Type</span><span class="pi">:</span> <span class="s1">'</span><span class="s">AWS::EC2::Instance'</span>
+    <span class="na">Properties</span><span class="pi">:</span>
+      <span class="na">ImageId</span><span class="pi">:</span> <span class="kt">!FindInMap</span> 
+        <span class="pi">-</span> <span class="s">Config</span>
+        <span class="pi">-</span> <span class="s">Static</span>
+        <span class="pi">-</span> <span class="s">AMI</span>
+      <span class="na">InstanceType</span><span class="pi">:</span> <span class="kt">!FindInMap</span> 
+        <span class="pi">-</span> <span class="s">Config</span>
+        <span class="pi">-</span> <span class="s">Static</span>
+        <span class="pi">-</span> <span class="s">InstanceType</span>
+      <span class="na">IamInstanceProfile</span><span class="pi">:</span> <span class="kt">!Ref</span> <span class="s">Ec2InstanceProfile</span>
+      <span class="na">Tags</span><span class="pi">:</span>
+        <span class="pi">-</span> <span class="na">Key</span><span class="pi">:</span> <span class="s">Name</span>
+          <span class="na">Value</span><span class="pi">:</span> <span class="s">app</span>
+      <span class="na">KeyName</span><span class="pi">:</span> <span class="kt">!Ref</span> <span class="s">KeyName</span>
+      <span class="na">SecurityGroupIds</span><span class="pi">:</span>
+        <span class="pi">-</span> <span class="kt">!Ref</span> <span class="s">SecGrp</span>
+      <span class="na">SubnetId</span><span class="pi">:</span> <span class="kt">!Ref</span> <span class="s">Subneta</span>
+<span class="na">Outputs</span><span class="pi">:</span>
+  <span class="na">WebEc2DNSName</span><span class="pi">:</span>
+    <span class="na">Description</span><span class="pi">:</span> <span class="s">The Web DNSName.</span>
+    <span class="na">Value</span><span class="pi">:</span> <span class="kt">!Ref</span> <span class="s">WebEc2.DNSName</span>
+</code></pre><h2 id='ec2-app-instance'>EC2 App Instance.</h2>
+<p>There is an EC2 instance for our App branch, which is in the same subnet as the Web instance.</p>
+
+<p>This instance contains our Perl code which connects to the RDS instance.</p>
+
+<p>Here, we can automate:</p>
+
+<ul>
+<li>Uploading the code to our instance.</li>
+<li>Installing key dependencies (perl, any addons etc.)</li>
+</ul>
+
+<p>Here, we can use the following tools to monitor health:</p>
+
+<ul>
+<li>Instance level - CloudWatch</li>
+<li>Application level - ...</li>
+</ul>
+<h2 id='ec2-web-instance'>EC2 Web Instance.</h2>
+<p>This instance contains two images that need to be served statically. The fastest server to set up and use here would be <code>lighttpd</code> from my experience.
+However, we need to forward requests to the app layer. Let&#39;s use <code>Nginx</code> for simplicity.</p>
+
+<p>Here, we can automate:</p>
+
+<ul>
+<li>The installation of Nginx.</li>
+<li>The uploading of the images to our instance. (Latest Git -&gt; Instance)</li>
+<li>Potentially, automating getting the latest images from GitLab and then deploying when there is a push (CD)?</li>
+<li>Potentially, using SSL to serve the images so we are not untrusted by Chrome and/or placing insecure assets on our application?</li>
+</ul>
+
+<p>Here, we can use the following tools to monitor health:</p>
+
+<ul>
+<li>Instance level - Cloudwatch</li>
+</ul>
+<h2 id='ec2-routetable'>EC2 RouteTable.</h2>
+<blockquote>
+<p>There is a RouteTable configuration allowing internet access from the public internet to the instance&#39;s subnet.</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="err">//</span><span class="w"> </span><span class="err">EC</span><span class="mi">2</span><span class="p">:</span><span class="w"> </span><span class="err">RouteTable</span><span class="w">
+</span><span class="err">//</span><span class="w"> </span><span class="err">From</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">cloudformation</span><span class="w"> </span><span class="err">template.</span><span class="w">
+</span><span class="s2">"PublicRoute"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"Type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"AWS::EC2::Route"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"Properties"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"RouteTableId"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"Ref"</span><span class="p">:</span><span class="w"> </span><span class="s2">"RouteTable"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="s2">"DestinationCidrBlock"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.0.0.0/0"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"GatewayId"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"Ref"</span><span class="p">:</span><span class="w"> </span><span class="s2">"InternetGateway"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"Metadata"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"AWS::CloudFormation::Designer"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"44404501-f95f-41e2-937f-384f636faa39"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">},</span><span class="w">
+</span></code></pre><h2 id='deploying'>Deploying.</h2>
+<aside class="notice">
+Make sure to generate a SSH key-pair in EC2 with your account. Follow this if you are unsure: <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html#having-ec2-create-your-key-pair">Amazon SSH Key-Pair Generation</a>
+</aside>
+<h1 id='things-to-keep-in-mind'>Things to keep in mind.</h1><h2 id='cloudformation-itself'>CloudFormation itself.</h2>
+<ul>
+<li>Using a restrictive stack policy. Without one, we can inadvertently delete live production resources, probably causing a severe outage.</li>
+<li>Make sure to enable termination protection on the stack to avoid accidents resulting in an outage.</li>
+</ul>
+<h2 id='the-cloudformation-template'>The CloudFormation template.</h2>
+<p>We aren&#39;t using anything from subnetb, so we can get rid of it.</p>
+<h2 id='automation'>Automation.</h2>
+<p>A mixture of the following:</p>
+
+<ul>
+<li>Bash</li>
+<li>SaltStack</li>
+<li>ServerSpec</li>
+</ul>
+<h2 id='cloudwatch'>CloudWatch</h2>
+<blockquote>
+<p>Setup process:</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code><span class="c"># To use the command line to install the CloudWatch agent on an Amazon EC2 instance.</span>
+<span class="c"># Make a directory for downloading and unzipping the agent package. For example, tmp/AmazonCloudWatchAgent. Then change into that directory.</span>
+<span class="c"># Download the CloudWatch agent. For a Linux server, type the following:</span>
+wget https://s3.amazonaws.com/amazoncloudwatch-agent/linux/amd64/latest/AmazonCloudWatchAgent.zip
+
+<span class="c"># After you have downloaded the package, use a GPG signature file to verify the package signature. </span>
+wget https://s3.amazonaws.com/amazoncloudwatch-agent/assets/amazon-cloudwatch-agent.gpg
+
+<span class="c"># Unzip the package.</span>
+unzip AmazonCloudWatchAgent.zip
+
+<span class="c"># Install the package. On a Linux server, change to the directory containing the package and type:</span>
+sudo ./install.sh
+</code></pre>
+<p>https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/install-CloudWatch-Agent-on-first-instance.html
+Installation Process Overview</p>
+
+<p>The general flow of installing the CloudWatch agent is as follows:</p>
+
+<p>Create the IAM roles and users that you need for the CloudWatch agent. They enable CloudWatch to collect metrics from the server, and to integrate with AWS Systems Manager.</p>
+
+<p>If you are installing on an Amazon EC2 instance, attach an IAM role to the instance. If you are installing on an on-premises server, create an IAM user to enable the CloudWatch agent to write information to CloudWatch.</p>
+
+<p>Download the agent package, using either AWS Systems Manager Run Command or a public Amazon S3 download link.</p>
+
+<p>Modify the CloudWatch agent configuration files, and create a named profile for CloudWatch agent. Creating the named profile is optional when installing the agent on an Amazon EC2 instance.</p>
+
+<p>Start the agent.</p>
+<h2 id='awscli'>AWSCli</h2>
+<blockquote>
+<p>Installing AWScli (platform agnostic, Python required).</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>pip install awscli
+</code></pre>
+<p>The machine performing the creation of the stack must install <code>awscli</code>.</p>
+<h1 id='now-to-business'>Now to business.</h1>
+<p>The first thing we need to do is automate the creation of the stack. I personally think that rewriting this CloudFormation template in Ansible/Chef is significant overkill for an application like this, and in the interest of time, the best option is simply to deploy using the AWS Cli library.</p>
+
+<blockquote>
+<p>Deploying the CloudFormation template to AWS.</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>aws cloudformation deploy --template-file cloudformation.template --stack-name accelo-prod --parameter-overrides <span class="nv">KeyName</span><span class="o">=</span>accelo-prod --capabilities CAPABILITY_NAMED_IAM
+</code></pre>
+<aside class="notice">
+Make sure to configure `aws`: 
+
+* Add an IAM user with programmatic access.
+* Get the credentials.
+* Choose availability zone (ap-southeast-2).
+* `aws configure`.
+* Default output format [None]: text
+</aside>
+
+<p>We need to alter the AMI for the Sydney region. We SHOULD use mappings if we had a multi-region deployment.</p>
+
+<p>We can, of course, simply add this to our SaltStack deployment.</p>
+<h3 id='specifying-what-we-need-and-where-we-need-it'>Specifying what we need, and where we need it.</h3>
+<p>So now, in order, we need to describe what we want to deploy, and when.</p>
+
+<table><thead>
+<tr>
+<th>Item</th>
+<th>Description / Action</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>awscli</td>
+<td>Install, or verify the installation of, <code>awscli</code>.</td>
+</tr>
+<tr>
+<td>Check</td>
+<td>Check for existance of the CF template in the directory.</td>
+</tr>
+<tr>
+<td>CloudFormation Template</td>
+<td>Use the <code>awscli</code> to deploy our new CF template.</td>
+</tr>
+<tr>
+<td>ec2-userdata</td>
+<td>Install our ec2-userdata scripts on launch.</td>
+</tr>
+<tr>
+<td>Verify</td>
+<td>Make sure everything we asked for is currently in the environment.</td>
+</tr>
+</tbody></table>
+<h2 id='altering-the-cloudformation-template-to-add-our-userdata'>Altering the CloudFormation Template to add our userdata.</h2>
+<p>We need to add the following to our template in order to set up our hosts automatically.</p>
+
+<p>We have the following ports exposed on our two EC2 instances:</p>
+
+<ul>
+<li>&#39;443&#39;</li>
+<li>&#39;80&#39;</li>
+<li>&#39;22&#39;</li>
+</ul>
+
+<p>This means we should be setting up some form of SSL as well. I would recommend forwarding port 80 traffic to 443 (SSL) as well.</p>
+
+<p><strong>IMPORTANT FEEDBACK: The cloudformation template is missing a security rule for 3306 (RDS DB). This caused some time to be lost.</strong></p>
+
+<p><strong>IMPORTANT FEEDBACK: The cloudformation template creates the database testproject when test_project is needed.</strong></p>
+
+<p><strong>The key part of the configuration is to serve the /images directory in this branch and to forward on all other requests to the app layer.</strong></p>
+<h3 id='web-instance'>Web Instance</h3>
+<table><thead>
+<tr>
+<th>Item</th>
+<th>Description / Action</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>OpenSSL</td>
+<td>Install OpenSSL.</td>
+</tr>
+<tr>
+<td>Nginx</td>
+<td>Install Nginx.</td>
+</tr>
+<tr>
+<td>SSL</td>
+<td>Generate self signed certificate and move to Nginx.</td>
+</tr>
+<tr>
+<td>files (images)</td>
+<td>Download from Bitbucket, checkout web branch, extract the images folder.</td>
+</tr>
+<tr>
+<td>Nginx Config</td>
+<td>Configure Nginx to serve /images, otherwise send requests to the App instance.</td>
+</tr>
+</tbody></table>
+<h3 id='app-instance'>App Instance</h3>
+<table><thead>
+<tr>
+<th>Item</th>
+<th>Description / Action</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>OpenSSL</td>
+<td>Install OpenSSL.</td>
+</tr>
+<tr>
+<td>Code</td>
+<td>Download from Bitbucket, checkout app branch.</td>
+</tr>
+<tr>
+<td>SSL</td>
+<td>Generate self signed certificate and move to Plack directory.</td>
+</tr>
+<tr>
+<td><code>cpanm --installdeps .</code></td>
+<td>Install required dependencies</td>
+</tr>
+<tr>
+<td><code>plackup -p 8080 bin/app.psgi</code></td>
+<td>Run our server.</td>
+</tr>
+</tbody></table>
+<h2 id='ssl'>SSL</h2>
+<p>Our application seems to require SSL access, and it is good practice to be using it (lest your application be forever doomed with an &quot;insecure&quot; on Chrome).</p>
+
+<blockquote>
+<p>We need to generate and configure an SSL certificate for Nginx/Plack with the following steps:</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code><span class="c">#!/bin/bash</span>
+<span class="nb">echo</span> <span class="s2">"Generating an SSL private key to sign your certificate..."</span>
+openssl genrsa -des3 -out accelo.key 1024
+
+<span class="nb">echo</span> <span class="s2">"Generating a Certificate Signing Request..."</span>
+openssl req -new -key accelo.key -out accelo.csr
+
+<span class="nb">echo</span> <span class="s2">"Removing passphrase from key..."</span>
+cp accelo.key accelo.key.org
+openssl rsa -in accelo.key.org -out accelo.key
+rm accelo.key.org
+
+<span class="nb">echo</span> <span class="s2">"Generating certificate..."</span>
+openssl x509 -req -days 365 -in accelo.csr -signkey accelo.key -out accelo.crt
+
+<span class="nb">echo</span> <span class="s2">"Copying certificate (accelo.crt) to /etc/ssl/certs/"</span>
+<span class="c"># Create folder if it doesn't already exist.</span>
+mkdir -p  /etc/ssl/certs
+<span class="c"># Copy the certificate.</span>
+cp accelo.crt /etc/ssl/certs/
+
+<span class="nb">echo</span> <span class="s2">"Copying key (accelo.key) to /etc/ssl/private/"</span>
+<span class="c"># Create folder if it doesn't already exist.</span>
+mkdir -p  /etc/ssl/private
+<span class="c"># Copy the key.</span>
+cp accelo.key /etc/ssl/private/
+</code></pre>
+<blockquote>
+<p>We need to launch Plack using the following in order to make use of this file.</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>plackup --enable-ssl --ssl-key-file<span class="o">=</span>/etc/ssl/private/accelo.key --ssl-cert-file<span class="o">=</span>/etc/ssl/certs/accelo.crt -p 443 bin/app.psgi
+</code></pre>
+<p><em>Side note: We really should not be using Plack exposed to the internet. It is not designed for production use. Simply using Apache with mod_perl, or even using the <code>ProxyPass</code> directive is significantly more secure.</em></p>
+<h2 id='web-instance-userdata'>Web instance - UserData.</h2>
+<p>The instances are both using CentOS, so keep in mind we need to use yum as the package manager.
+We need to create a userdata template in order to install all of our required packages and configure the server.</p>
+
+<p><em>Side note: We should have an index.html hiding our images folder so the files are not exposed.</em></p>
+
+<p><em>Security note: We should not allow root to be running the services. This would be changed in a production environment.</em></p>
+
+<p>Our userdata to install our web instance will look something like this:</p>
+<pre class="highlight shell tab-shell"><code><span class="c">#!/bin/bash</span>
+
+<span class="nb">echo</span> <span class="s2">"Updating yum."</span>
+yum update -y
+
+<span class="nb">echo</span> <span class="s2">"Installing Nginx."</span>
+yum install -y nginx sudo openssl
+
+<span class="nb">echo</span> <span class="s2">"Generating an SSL private key to sign your certificate..."</span>
+openssl genrsa -des3 -out accelo.key 1024
+
+<span class="nb">echo</span> <span class="s2">"Generating a Certificate Signing Request..."</span>
+openssl req -new -key accelo.key -out accelo.csr
+
+<span class="nb">echo</span> <span class="s2">"Removing passphrase from key..."</span>
+cp accelo.key accelo.key.org
+openssl rsa -in accelo.key.org -out accelo.key
+rm accelo.key.org
+
+<span class="nb">echo</span> <span class="s2">"Generating certificate..."</span>
+openssl x509 -req -days 365 -in accelo.csr -signkey accelo.key -out accelo.crt
+
+<span class="nb">echo</span> <span class="s2">"Copying certificate (accelo.crt) to /etc/ssl/certs/"</span>
+<span class="c"># Create folder if it doesn't already exist.</span>
+mkdir -p  /etc/ssl/certs
+<span class="c"># Copy the certificate.</span>
+cp accelo.crt /etc/ssl/certs/
+
+<span class="nb">echo</span> <span class="s2">"Copying key (accelo.key) to /etc/ssl/private/"</span>
+<span class="c"># Create folder if it doesn't already exist.</span>
+mkdir -p  /etc/ssl/private
+<span class="c"># Copy the key.</span>
+cp accelo.key /etc/ssl/private/
+
+<span class="c"># Now set up Nginx.</span>
+
+<span class="nv">root</span><span class="o">=</span><span class="s2">"/var/www/accelo"</span>
+<span class="nv">block</span><span class="o">=</span><span class="s2">"/etc/nginx/sites-available/accelo"</span>
+
+<span class="c"># Create the folder, and parents if required.</span>
+sudo mkdir -p <span class="nv">$root</span>
+
+<span class="c"># Download our images.</span>
+git clone -b web --single-branch https://bitbucket.org/mark_curtis/devops_test_project.git --depth 1 <span class="nv">$root</span>
+
+<span class="c"># They should now be in /var/www/accelo/images</span>
+
+<span class="c"># We need to listen on 80 and 443.</span>
+<span class="c"># Create the Nginx server block file:</span>
+sudo tee <span class="nv">$block</span> &gt; /dev/null <span class="sh">&lt;&lt;EOF 
+server {
+        listen 80;
+        listen [::]:80;
+
+        root /var/www/$domain/html;
+
+        server_name accelo-prod;
+
+        location /images {
+                try_files $uri $uri/ =404;
+        }
+        location / {
+                proxy_set_header Host $host;
+                proxy_set_header X-Real-IP $remote_addr;
+                proxy_pass $APP_ENDPOINT;
+        }
+}
+
+server {
+        listen 443 ssl;
+        ssl on;
+
+        root /var/www/$domain/html;
+
+        ssl_certificate /etc/ssl/certs/accelo.crt;
+        ssl_certificate_key /etc/ssl/private/accelo.key;
+
+        server_name accelo-prod;
+
+        location /images {
+                try_files $uri $uri/ =404;
+        }
+
+        location / {
+                proxy_set_header Host $host;
+                proxy_set_header X-Real-IP $remote_addr;
+                proxy_pass $APP_ENDPOINT;
+        }
+}
+
+EOF
+
+</span><span class="c"># Link to make it available</span>
+sudo ln -s <span class="nv">$block</span> /etc/nginx/sites-enabled/
+
+<span class="c"># Test configuration and reload if successful</span>
+sudo nginx -t <span class="o">&amp;&amp;</span> sudo nginx -s reload
+</code></pre><h2 id='app-instance-userdata'>App instance - UserData.</h2>
+<p>The instances are both using CentOS, so keep in mind we need to use yum as the package manager.
+We need to create a userdata template in order to install all of our required packages and configure the server.</p>
+
+<p><em>Security note: We should not allow root to be running the services. This would be changed in a production environment.</em></p>
+<pre class="highlight shell tab-shell"><code><span class="c">#!/bin/bash</span>
+
+<span class="nb">echo</span> <span class="s2">"Updating yum."</span>
+yum update -y
+
+<span class="nb">echo</span> <span class="s2">"Installing Nginx."</span>
+yum install -y sudo openssl curl
+
+<span class="nb">echo</span> <span class="s2">"Install Perl."</span>
+curl -L http://install.perlbrew.pl | bash
+
+<span class="nb">echo</span> <span class="s2">"Generating an SSL private key to sign your certificate..."</span>
+openssl genrsa -des3 -out accelo.key 1024
+
+<span class="nb">echo</span> <span class="s2">"Generating a Certificate Signing Request..."</span>
+openssl req -new -key accelo.key -out accelo.csr
+
+<span class="nb">echo</span> <span class="s2">"Removing passphrase from key..."</span>
+cp accelo.key accelo.key.org
+openssl rsa -in accelo.key.org -out accelo.key
+rm accelo.key.org
+
+<span class="nb">echo</span> <span class="s2">"Generating certificate..."</span>
+openssl x509 -req -days 365 -in accelo.csr -signkey accelo.key -out accelo.crt
+
+<span class="nb">echo</span> <span class="s2">"Copying certificate (accelo.crt) to /etc/ssl/certs/"</span>
+<span class="c"># Create folder if it doesn't already exist.</span>
+mkdir -p /etc/ssl/certs
+<span class="c"># Copy the certificate.</span>
+cp accelo.crt /etc/ssl/certs/
+
+<span class="nb">echo</span> <span class="s2">"Copying key (accelo.key) to /etc/ssl/private/"</span>
+<span class="c"># Create folder if it doesn't already exist.</span>
+mkdir -p  /etc/ssl/private
+<span class="c"># Copy the key.</span>
+cp accelo.key /etc/ssl/private/
+
+<span class="nb">echo</span> <span class="s2">"Make dir."</span>
+mkdir -p /var/application/
+
+<span class="nb">echo</span> <span class="s2">"Downloading app."</span>
+<span class="c"># Download our app.</span>
+git clone -b app --single-branch https://bitbucket.org/mark_curtis/devops_test_project.git --depth 1 /var/application/
+
+<span class="c"># Now set up Plack.</span>
+
+<span class="nb">echo</span> <span class="s2">"Install cpanminus package manager."</span>
+curl -L https://cpanmin.us | perl - --sudo App::cpanminus
+
+<span class="nb">echo</span> <span class="s2">"Install Plack."</span>
+cpanm Plack
+
+<span class="nb">echo</span> <span class="s2">"Install the rest of the dependencies."</span>
+cpanm --installdeps /var/application/cpanfile
+
+<span class="nb">echo</span> <span class="s2">"Start Plack in background."</span>
+plackup --daemonize --enable-ssl --ssl-key-file<span class="o">=</span>/etc/ssl/private/accelo.key --ssl-cert-file<span class="o">=</span>/etc/ssl/certs/accelo.crt -p 443 bin/app.psgi
+</code></pre><h1 id='client-setup-and-deployment-of-the-stack'>Client Setup and Deployment of the Stack.</h1><pre class="highlight shell tab-shell"><code><span class="c">#!/bin/bash</span>
+
+<span class="nb">echo</span> <span class="s2">"# Hello Accelo."</span>
+<span class="nb">echo</span> <span class="s2">"# This script will create the stack, create a roster file for saltstack, then deploy the stack onto both nodes."</span>
+<span class="nb">echo</span> <span class="s2">"# It will then provide you with a URL to connect to the web instance."</span>
+<span class="nb">echo</span> <span class="s2">"# You can replace the key with yours below."</span>
+<span class="nb">echo</span> <span class="s2">"# Enjoy."</span>
+<span class="nb">echo</span> <span class="s2">" - Alexander Nicholson."</span>
+
+<span class="c"># Create the stack.</span>
+aws cloudformation deploy --template-file cloudformation.template --stack-name accelo-prod --parameter-overrides <span class="nv">KeyName</span><span class="o">=</span>accelo-prod --capabilities CAPABILITY_NAMED_IAM
+<span class="nv">launch1</span><span class="o">=</span><span class="sb">`</span>aws ec2 describe-instances --query <span class="s1">'Reservations[0].Instances[*].[PublicDnsName,Tags[*]]'</span> | grep -E <span class="s1">'Name|ec2'</span> | sed -e <span class="s2">"s/^Name//"</span> | awk <span class="s1">'{$1=$1};1'</span> | grep -c app<span class="sb">`</span>
+<span class="nv">launch2</span><span class="o">=</span><span class="sb">`</span>aws ec2 describe-instances --query <span class="s1">'Reservations[1].Instances[*].[PublicDnsName,Tags[*]]'</span> | grep -E <span class="s1">'Name|ec2'</span> | sed -e <span class="s2">"s/^Name//"</span> | awk <span class="s1">'{$1=$1};1'</span> | grep -c web<span class="sb">`</span>
+<span class="nv">rds</span><span class="o">=</span><span class="sb">`</span>aws rds describe-db-instances --query <span class="s2">"DBInstances[].Endpoint[].Address"</span><span class="sb">`</span>
+<span class="c"># Create our roster.</span>
+touch roster-accelo.yaml
+aws ec2 describe-instances --query <span class="s1">'Reservations[0].Instances[*].[PublicDnsName,Tags[*]]'</span> | grep -E <span class="s1">'Name'</span> | sed -e <span class="s2">"s/^Name//"</span> | awk <span class="s1">'{$1=$1};1'</span> &gt;&gt; roster-accelo.yaml
+perl -pi -e <span class="s1">'chomp if eof'</span> roster-accelo.yaml
+<span class="nb">printf</span> : &gt;&gt; roster-accelo.yaml
+<span class="nb">echo</span> &gt;&gt; roster-accelo.yaml
+<span class="nb">printf</span> <span class="s2">"    host: "</span> &gt;&gt; roster-accelo.yaml
+aws ec2 describe-instances --query <span class="s1">'Reservations[0].Instances[*].[PublicDnsName,Tags[*]]'</span> | grep -E <span class="s1">'ec2'</span> | sed -e <span class="s2">"s/^Name//"</span> | awk <span class="s1">'{$1=$1};1'</span> &gt;&gt; roster-accelo.yaml
+<span class="nb">echo</span> <span class="s2">"    user: ec2-user"</span> &gt;&gt; roster-accelo.yaml
+<span class="nb">echo</span> <span class="s2">"    priv: accelo-prod.pem"</span> &gt;&gt; roster-accelo.yaml
+<span class="nb">echo</span> <span class="s2">"    sudo: True"</span> &gt;&gt; roster-accelo.yaml
+aws ec2 describe-instances --query <span class="s1">'Reservations[1].Instances[*].[PublicDnsName,Tags[*]]'</span> | grep -E <span class="s1">'Name'</span> | sed -e <span class="s2">"s/^Name//"</span> | awk <span class="s1">'{$1=$1};1'</span> &gt;&gt; roster-accelo.yaml
+perl -pi -e <span class="s1">'chomp if eof'</span> roster-accelo.yaml
+<span class="nb">printf</span> : &gt;&gt; roster-accelo.yaml
+<span class="nb">echo</span> &gt;&gt; roster-accelo.yaml
+<span class="nb">printf</span> <span class="s2">"    host: "</span> &gt;&gt; roster-accelo.yaml
+aws ec2 describe-instances --query <span class="s1">'Reservations[1].Instances[*].[PublicDnsName,Tags[*]]'</span> | grep -E <span class="s1">'ec2'</span> | sed -e <span class="s2">"s/^Name//"</span> | awk <span class="s1">'{$1=$1};1'</span> &gt;&gt; roster-accelo.yaml
+<span class="nb">echo</span> <span class="s2">"    user: ec2-user"</span> &gt;&gt; roster-accelo.yaml
+<span class="nb">echo</span> <span class="s2">"    priv: accelo-prod.pem"</span> &gt;&gt; roster-accelo.yaml
+<span class="nb">echo</span> <span class="s2">"    sudo: True"</span> &gt;&gt; roster-accelo.yaml
+
+<span class="c"># Alter RDS connection host in app state.</span>
+sed -i -e <span class="s1">'s/replaceme/'</span><span class="s2">"</span><span class="nv">$rds</span><span class="s2">"</span><span class="s1">'/g'</span> states/app.sls
+
+<span class="nv">nginxrev</span><span class="o">=</span><span class="s2">"</span><span class="se">\"</span><span class="s2">http:</span><span class="se">\/\/</span><span class="s2">"</span>
+<span class="c"># Find the app instance and replace it in Nginx config.</span>
+<span class="k">if</span> <span class="o">[[</span> <span class="nv">$launch1</span> -eq 1 <span class="o">]]</span>
+<span class="k">then
+  </span>nginxrev+<span class="o">=</span><span class="sb">`</span>aws ec2 describe-instances --query <span class="s1">'Reservations[0].Instances[*].[PublicDnsName,Tags[*]]'</span> | grep -E <span class="s1">'ec2'</span> | sed -e <span class="s2">"s/^Name//"</span> | awk <span class="s1">'{$1=$1};1'</span><span class="sb">`</span>
+<span class="k">else
+  </span><span class="nv">nginxrev</span><span class="o">=</span><span class="sb">`</span>aws ec2 describe-instances --query <span class="s1">'Reservations[1].Instances[*].[PublicDnsName,Tags[*]]'</span> | grep -E <span class="s1">'ec2'</span> | sed -e <span class="s2">"s/^Name//"</span> | awk <span class="s1">'{$1=$1};1'</span><span class="sb">`</span>
+<span class="k">fi
+
+</span>nginxrev+<span class="o">=</span><span class="s2">"</span><span class="se">\"</span><span class="s2">"</span>
+
+<span class="c"># Alter reverse proxy connection host in web state.</span>
+sed -i -e <span class="s1">'s/replaceme/'</span><span class="s2">"</span><span class="nv">$nginxrev</span><span class="s2">"</span><span class="s1">'/g'</span> states/files/nginx.conf
+
+
+<span class="c"># Create virtual environment so we can use saltstack without changing the client machine.</span>
+virtualenv venv
+<span class="nb">source </span>venv/bin/activate
+pip install salt-ssh
+<span class="nb">echo</span> <span class="s2">"Initialising roster."</span>
+sudo salt-ssh --roster-file<span class="o">=</span>inventory.yaml
+sudo salt-ssh -i <span class="s1">'*'</span> --raw <span class="s1">'sudo yum install -y python'</span>
+<span class="nb">echo</span> <span class="s2">"Testing connectivity."</span>
+sudo salt-ssh -i <span class="s1">'*'</span> test.ping
+<span class="nb">echo</span> <span class="s2">"[+] Starting run for our web instance."</span>
+sudo salt-ssh -i <span class="s1">'web'</span> state.apply web
+<span class="nb">echo</span> <span class="s2">"[+] Starting run for our app instance."</span>
+sudo salt-ssh -i <span class="s1">'app'</span> state.apply app
+<span class="nb">echo</span> <span class="s2">"Saltstack completed."</span>
+
+<span class="c"># Completed.</span>
+<span class="nb">echo </span>You can access the stack web instance via the following link:
+
+<span class="k">if</span> <span class="o">[[</span> <span class="nv">$launch2</span> -eq 1 <span class="o">]]</span>
+<span class="k">then
+  </span>aws ec2 describe-instances --query <span class="s1">'Reservations[1].Instances[*].[PublicDnsName,Tags[*]]'</span> | grep -E <span class="s1">'ec2'</span> | sed -e <span class="s2">"s/^Name//"</span> | awk <span class="s1">'{$1=$1};1'</span>
+<span class="k">else
+  </span>aws ec2 describe-instances --query <span class="s1">'Reservations[0].Instances[*].[PublicDnsName,Tags[*]]'</span> | grep -E <span class="s1">'ec2'</span> | sed -e <span class="s2">"s/^Name//"</span> | awk <span class="s1">'{$1=$1};1'</span>
+<span class="k">fi
+
+return </span>0
+</code></pre>
+<p><em>Side note: In the future, I would split the web and app sls files into seperate parts to make it more verbose.</em></p>
+
+<p><em>Side note: We should be using a master node and deploying from there.</em></p>
+
+<p>As I am letting Saltstack handle the git repo, it will always have the latest version. It will also get the correct branch for me and place it where it needs to be.</p>
+
+<p>The way this works requires you to have no other ec2</p>
+
+<p>Please replace &quot;accelo-prod.pem&quot; with the key that you have uploaded, as per the beginning of this document so that this will work.</p>
+
+<p>Keep in mind, this will take quite a while to do it&#39;s thing. Around 15 minutes for the app server deployment, and 10 minutes for the web server deployment. Get a coffee while you wait.</p>
+
+<p>Please take care of the previous notes regarding the template alterations. I am using sed above to replace the values so that we can connect the dots. There&#39;s lots to improve on in future.</p>
+
+<p>You can kill plack with <code>sudo salt-ssh -i &quot;app&quot; --raw &quot;sudo pkill -f plackup&quot;</code>
+You can start plack again with <code>sudo salt-ssh --verbose -i &quot;app&quot; state.apply web_download</code></p>
+
+<p>Some other notes:</p>
+
+<ul>
+<li>Optimise script to make less calls.</li>
+<li>Enable SSL on App side.</li>
+<li>Add more failsafes.</li>
+<li>The database instance should definitely have a name in future.</li>
+</ul>
+
+      </div>
+      <div class="dark-box">
+          <div class="lang-selector">
+                <a href="#" data-language-name="shell">shell</a>
+          </div>
+      </div>
+    </div>
+  </body>
+</html>
