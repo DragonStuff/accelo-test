@@ -28,6 +28,8 @@ Please take care of the previous notes regarding the template alterations. I am 
 
 You can kill plack with `sudo salt-ssh -i "app" --raw "sudo pkill -f plackup"` You can start plack again with `sudo salt-ssh --verbose -i "app" state.apply web_download`
 
+**MAKE SURE TO REPLACE THE DBHOST WITH THE ONE IN THE states/app.sls IF YOU DO THE ABOVE. You can also just copy lines 55-66 and put them in states/web_download if you wish and then run the command to start plack.**
+
 Some other notes:
 
 * Optimise script to make less calls.
