@@ -9,7 +9,7 @@ echo "# Enjoy."
 echo " - Alexander Nicholson."
 
 # Create the stack.
-# aws cloudformation deploy --template-file cloudformation.template --stack-name accelo-prod --parameter-overrides KeyName=accelo-prod --capabilities CAPABILITY_NAMED_IAM
+aws cloudformation deploy --template-file cloudformation.template --stack-name accelo-prod --parameter-overrides KeyName=accelo-prod --capabilities CAPABILITY_NAMED_IAM
 launch1=`aws ec2 describe-instances --query 'Reservations[0].Instances[*].[PublicDnsName,Tags[*]]' | grep -E 'Name|ec2' | sed -e "s/^Name//" | awk '{$1=$1};1' | grep -c app`
 launch2=`aws ec2 describe-instances --query 'Reservations[1].Instances[*].[PublicDnsName,Tags[*]]' | grep -E 'Name|ec2' | sed -e "s/^Name//" | awk '{$1=$1};1' | grep -c web`
 rds=`aws rds describe-db-instances --query "DBInstances[].Endpoint[].Address"`
