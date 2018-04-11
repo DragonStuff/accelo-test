@@ -9,9 +9,9 @@ echo "# Enjoy."
 echo " - Alexander Nicholson."
 
 # Create the stack.
-aws cloudformation deploy --template-file cloudformation.template --stack-name accelo-prod --parameter-overrides KeyName=accelo-prod --capabilities CAPABILITY_NAMED_IAM
+# aws cloudformation deploy --template-file cloudformation.template --stack-name accelo-prod --parameter-overrides KeyName=accelo-prod --capabilities CAPABILITY_NAMED_IAM
 launch1=`aws ec2 describe-instances --query 'Reservations[0].Instances[*].[PublicDnsName,Tags[*]]' | grep -E 'Name|ec2' | sed -e "s/^Name//" | awk '{$1=$1};1' | grep -c app`
-launch2=`aws ec2 describe-instances --query 'Reservations[1].Instances[*].[PublicDnsName,Tags[*]]' | grep -E 'Name|ec2' | sed -e "s/^Name//" | awk '{$1=$1};1' | grep -c web`
+launch2=`aws ec2 describe-instances --query 'Reservations[0].Instances[*].[PublicDnsName,Tags[*]]' | grep -E 'Name|ec2' | sed -e "s/^Name//" | awk '{$1=$1};1' | grep -c web`
 rds=`aws rds describe-db-instances --query "DBInstances[].Endpoint[].Address"`
 # Create our roster.
 touch roster-accelo.yaml
@@ -24,12 +24,12 @@ aws ec2 describe-instances --filters Name=tag:Name,Values=app --query 'Reservati
 echo "    user: ec2-user" >> roster-accelo.yaml
 echo "    priv: accelo-prod.pem" >> roster-accelo.yaml
 echo "    sudo: True" >> roster-accelo.yaml
-aws ec2 describe-instances --filters Name=tag:Name,Values=web --query 'Reservations[1].Instances[*].[PublicDnsName,Tags[*]]' | grep -E 'Name' | sed -e "s/^Name//" | awk '{$1=$1};1' >> roster-accelo.yaml
+aws ec2 describe-instances --filters Name=tag:Name,Values=web --query 'Reservations[0].Instances[*].[PublicDnsName,Tags[*]]' | grep -E 'Name' | sed -e "s/^Name//" | awk '{$1=$1};1' >> roster-accelo.yaml
 perl -pi -e 'chomp if eof' roster-accelo.yaml
 printf : >> roster-accelo.yaml
 echo >> roster-accelo.yaml
 printf "    host: " >> roster-accelo.yaml
-aws ec2 describe-instances --filters Name=tag:Name,Values=web --query 'Reservations[1].Instances[*].[PublicDnsName,Tags[*]]' | grep -E 'ec2' | sed -e "s/^Name//" | awk '{$1=$1};1' >> roster-accelo.yaml
+aws ec2 describe-instances --filters Name=tag:Name,Values=web --query 'Reservations[0].Instances[*].[PublicDnsName,Tags[*]]' | grep -E 'ec2' | sed -e "s/^Name//" | awk '{$1=$1};1' >> roster-accelo.yaml
 echo "    user: ec2-user" >> roster-accelo.yaml
 echo "    priv: accelo-prod.pem" >> roster-accelo.yaml
 echo "    sudo: True" >> roster-accelo.yaml
@@ -62,4 +62,4 @@ echo "Saltstack completed."
 # Completed.
 echo You can access the stack web instance via the following link:
 printf https://
-aws ec2 describe-instances --filters Name=tag:Name,Values=web --query 'Reservations[1].Instances[*].[PublicDnsName,Tags[*]]' | grep -E 'ec2' | sed -e "s/^Name//" | awk '{$1=$1};1'
+aws ec2 describe-instances --filters Name=tag:Name,Values=web --query 'Reservations[0].Instances[*].[PublicDnsName,Tags[*]]' | grep -E 'ec2' | sed -e "s/^Name//" | awk '{$1=$1};1'
