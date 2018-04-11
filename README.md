@@ -6,7 +6,9 @@ There is a copy of the docs that is in Markdown for use on Github. I recommend g
 
 ## Running
 
-You need to do `pip install awscli`
+Download a copy of this repository and `cd` to make it your working directory.
+
+You need to do `pip install awscli`.
 
 There is a venv environment if you need that, otherwise do: `pip install salt-ssh` on your machine.
 
@@ -30,3 +32,4 @@ Some other notes:
 * Enable SSL on App side.
 * Add more failsafes.
 * The database instance should definitely have a name in future.
+* Don't upload venv, use requirements.txt. Yes, I know, but honestly too much time has been spent on this already ;)
