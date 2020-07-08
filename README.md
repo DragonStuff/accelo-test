@@ -1,4 +1,4 @@
-# accelo-test
+# saltstack-test
 
 HTML Documentation located inside docs/
 
