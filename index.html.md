@@ -1,5 +1,5 @@
 ---
-title: Accelo Reference
+title: SaltStack Test Reference
 
 language_tabs: # must be one of https://git.io/vQNgJ
   - shell
